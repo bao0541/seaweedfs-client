@@ -1,12 +1,12 @@
 {
-    "name": "tystuyfzand/seaweedfs-client",
+    "name": "bao0541/seaweedfs-client",
     "description": "A SeaweedFS implementation for PHP based on Guzzle",
     "type": "library",
     "license": "ISC",
     "authors": [
         {
-            "name": "Tyler Stuyfzand",
-            "email": "tyler@tystuyfzand.com"
+            "name": "Tongbo Bao",
+            "email": "249614954@qq.com"
         }
     ],
     "require": {
