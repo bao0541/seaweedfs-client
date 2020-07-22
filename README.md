@@ -15,8 +15,9 @@ Example
 <?php
 $cache = new \SeaweedFS\Cache\FileCache('./cache');
 
-$client = new SeaweedFS\SeaweedFS('127.0.0.1:9333', 'http', $cache);
-
+$client = new \SeaweedFS\SeaweedFS('127.0.0.1:9333', 'http', $cache);
+// Set Volume Host
+$client->setVolumeHost('127.0.0.1:8080');
 // Upload a file and get the returned object (SeaweedFS\Models\File)
 $file = $client->upload('test1234', 'test.txt');
 
@@ -38,6 +39,8 @@ echo "URL: " . $file->getFileUrl() . PHP_EOL;
 $volume = $client->lookup($file->fid);
 
 echo "URL (manual): " . $client->buildVolumeUrl($volume->getPublicUrl(), $file->fid) . PHP_EOL;
+// OR
+echo "URL (manual): " . $client->buildVolumeUrl('', $file->fid) . PHP_EOL;
 ```
 
 Other packages

@@ -1,5 +1,5 @@
 {
-    "name": "bao0541/seaweedfs-client",
+    "name": "tongbobao/seaweedfs-client",
     "description": "A SeaweedFS implementation for PHP based on Guzzle",
     "type": "library",
     "license": "ISC",
