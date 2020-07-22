@@ -33,6 +33,11 @@ class SeaweedFS {
     protected $cache;
 
     /**
+     * @var volume public host
+     */
+    protected $volumeHost;
+
+    /**
      * Construct a new SeaweedFS client.
      *
      * @param $master
@@ -308,6 +313,25 @@ class SeaweedFS {
      * @return string
      */
     public function buildVolumeUrl($host, $path = null) {
+        $host = $this->volumeHost ?: $host;
         return sprintf('%s://%s/%s', $this->scheme, $host, $path ? ltrim($path, '/') : '');
+    }
+
+    /**
+     * set volume host
+     *
+     * @param $host
+     */
+    public function setVolumeHost($host){
+        $this->volumeHost = $host;
+    }
+
+    /**
+     * get volume host
+     * 
+     * @return volumehost
+     */
+    public function getVolumeHost(){
+        return $this->volumeHost;
     }
 }
